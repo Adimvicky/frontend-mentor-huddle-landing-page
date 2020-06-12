@@ -1,0 +1,134 @@
+:root {
+	--color-pink : hsl(322, 100%, 66%);
+	--color-cyan-pale : hsl(193, 100%, 96%);
+	--color-cyan-dark : hsl(192, 100%, 9%);
+	--color-blue : hsl(208, 11%, 55%);
+}
+
+/* BASIC RESET */
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Open Sans',sans-serif;
+	font-size: 1.8rem;
+	color : var(--color-cyan-dark);
+}
+a {
+	text-decoration: none;
+	color : inherit;
+}
+
+/* LAYOUT */
+.container {
+}
+section {
+	padding : 7.5rem;
+	margin-bottom : 5rem;
+}
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.col-1-of-2 {
+	flex-basis : 50%;
+}
+.section-hero {
+	background-image: url(./images/bg-hero-desktop.svg);
+	background-color: var(--color-cyan-pale);
+	background-size: cover;
+	min-height: 55rem;
+}
+.section-hero__text {
+	flex-basis: 45%;
+	max-width: 70rem;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.section-hero__illustration img {
+	width: 100%;
+}
+
+.feature-card {
+	padding: 7.5rem 7.5rem 7.5rem 10rem;
+	box-shadow: -1px -2px 15px rgba(0,0,0,.05);
+	border-radius: 2.5rem;
+}
+.feature-card__text {
+	max-width: 55rem;
+}
+.feature-card__figure {
+	text-align: right;
+}
+.feature-card__figure img {
+	max-width: 45rem;
+}
+
+
+/* COMPONENTS */
+.btn {
+	display: inline-block;
+	padding : 1.5rem 6rem;
+	border-radius: 100px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+	background-color: #fff;
+}
+.btn--pink {
+	background-color: var(--color-pink);
+	color: #fff;
+}
+.btn--md {
+	padding : 2rem 8rem;
+}
+h1, h2, h3 {
+	font-family: 'Poppins',sans-serif;
+	text-transform: capitalize;
+}
+h1 {
+	font-size: 4.5rem;
+}
+h2 {
+	margin-bottom: 2rem;
+}
+p {
+	line-height: 1.65;
+}
+.p1 {
+	font-size: 2rem;
+}
+
+.tl {
+	text-align: left;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* UTILITIES */
+
+.my-bg {
+	margin-top: 7.5rem;
+	margin-bottom: 7.5rem;
+}
+.my-md {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+
+.text-light {
+	color: var(--color-blue);
+}
