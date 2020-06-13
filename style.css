@@ -157,6 +157,9 @@ section {
 	align-items: center;
 	justify-content: center;
 }
+.footer__text__copy {
+	max-width: 35rem;;
+}
 /* COMPONENTS */
 .btn {
 	display: inline-block;
