@@ -25,6 +25,9 @@ a {
 	text-decoration: none;
 	color : inherit;
 }
+ul {
+	list-style: none;
+}
 
 /* LAYOUT */
 .container {
@@ -55,6 +58,7 @@ section {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 5rem;
 }
 
 .section-hero__illustration img {
@@ -77,10 +81,85 @@ section {
 }
 
 
+.footer {
+	margin-top: 30rem;
+	padding : 0 12.5rem;
+	padding-top: 20rem;
+	background-color: var(--color-cyan-dark);
+	color: #fff;
+	min-height: 40rem;
+
+	position: relative;
+}
+
+.footer__cta {
+	position: absolute;
+	left: 50%;
+	top: -40%;
+	transform : translateX(-50%);
+	background-color: #fff;
+	color: var(--color-cyan-dark);
+	max-width: 90rem;
+	padding: 7.5rem;
+	border-radius: 2.5rem;
+	box-shadow: -1px -2px 15px rgba(0,0,0,.05);
+	text-align: center;
+
+}
+.footer__cta h3 {
+	font-size: 4rem;
+	margin-bottom: 5rem;
+}
+
+.footer__text {
+	display: flex;
+	justify-content: space-between;
+	min-height: 20rem;
+	color : rgba(255,255,255,.9);
+	margin-top: 2.5rem;
+}
+.footer__text__contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 45rem;
+}
+.footer__text__contact-info {
+	display: flex;
+	align-items: center;
+
+}
+.footer__text__contact-info img {
+	margin-right : 1.5rem;
+}
+.footer__text__nav {
+	font-size: 2rem;
+}
+.footer__text__nav-item:not(:last-child){
+	margin-bottom: 2.5rem;
+}
+.footer__text__social {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.footer__text__social-links {
+	display: flex;
+}
+.footer__text__social-links-item {
+	margin-right: 1.5rem;
+	font-size: 2.5rem;
+	border: 1px solid rgba(255,255,255,.9);
+	border-radius: 50%;
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 /* COMPONENTS */
 .btn {
 	display: inline-block;
-	padding : 1.5rem 6rem;
 	border-radius: 100px;
 	box-shadow: 0 2px 5px rgba(0,0,0,.2);
 	background-color: #fff;
@@ -89,15 +168,21 @@ section {
 	background-color: var(--color-pink);
 	color: #fff;
 }
+.btn--sm {
+	padding : 1.5rem 6rem;
+}
 .btn--md {
 	padding : 2rem 8rem;
+}
+.btn--lg {
+	padding: 3rem 9rem;
 }
 h1, h2, h3 {
 	font-family: 'Poppins',sans-serif;
 	text-transform: capitalize;
 }
 h1 {
-	font-size: 4.5rem;
+	font-size: 4rem;
 }
 h2 {
 	margin-bottom: 2rem;
@@ -114,8 +199,14 @@ p {
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 1rem 0;
+}
+.attribution a {
+	color: var(--color-pink)
+}
 
 /* UTILITIES */
 
@@ -131,4 +222,95 @@ p {
 
 .text-light {
 	color: var(--color-blue);
+}
+
+@media screen and (max-width : 76.25em){
+	section {
+		padding : 5rem;
+	}
+	.footer {
+		padding-right: 5rem;
+		padding-left: 5rem;
+	}
+}
+
+@media screen and (max-width : 68.75em){
+	.row {
+		flex-direction: column;
+	}
+	.section-hero__text {
+		margin-top: 5rem;
+		text-align: center;
+	}
+	.section-hero__text .btn {
+		margin: 2rem 0 5rem 0;
+	}
+	.feature-card {
+		padding: 5rem;
+	}
+	.feature-card.row .col-1-of-2:first-child {
+		margin-bottom: 5rem;
+	}
+	.footer__cta {
+		top : -30%;
+		width: 70%;
+    	padding: 4rem;
+	}
+	.footer__text__contact > *:not(:last-child){
+		margin-bottom: 1.5rem;
+	}
+	.footer__text {
+		flex-direction: column;
+		padding-bottom: 2.5rem;
+
+	}
+	.footer__text > *:not(:last-child){
+		margin-bottom: 5rem;
+	}
+	.footer__text__social {
+		align-self: center;
+		text-align: center;
+		align-items: center;
+	}
+	.footer__text__social-links {
+		margin-bottom: 2rem;
+	}
+}
+
+@media screen and (max-width : 37.5em){
+	html {
+		font-size: 58%;
+	}
+	section {
+		padding: 1rem;
+	}
+	.section-hero {
+		padding-top: 2rem;
+	}
+	.section-hero__text {
+		margin-top: 3rem;
+	}
+	.btn {
+		padding : 1rem 2rem;
+	}
+	.header__logo img {
+		max-width: 17rem;
+	}
+	.feature-card {
+		padding: 2.5rem;
+	}
+	.feature-card__figure img{
+		max-width: 30rem;
+	}
+	.footer {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.footer__cta {
+		top: -15%;
+		padding: 2.5rem;
+	}
+	.footer__cta h3 {
+		font-size: 2.8rem;
+	}
 }
